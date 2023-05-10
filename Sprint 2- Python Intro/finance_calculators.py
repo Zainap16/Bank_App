@@ -35,7 +35,7 @@ if user_option == 'bond':
         input('Enter interest rate: '))
     period = float(input('Enter number of months you plan to repay the bond: '))
     installments = 0
-    installments = value_of_the_house * (interest_rate * (1 + interest_rate) * period) / ((1 + interest_rate) * period - 1)
+    installments = value_of_the_house * ((interest_rate / 12) * (1 + (interest_rate / 12)) * period) / ((1 + (interest_rate / 12)) * period - 1)
     print('Your monthly payments will be: R', float(installments))
     
 
