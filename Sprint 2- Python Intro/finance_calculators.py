@@ -18,6 +18,16 @@ if user_option == 'investment':
         input('Enter number of years: '))
     user_investment_option = input(
         'Choose between "simple" or "compound": ').lower()
+    if user_investment_option == 'simple':
+        total = 0
+        total = user_amount_deposit_p * \
+            (1 + (interest_rate/100) * user_num_years_t)
+        print('The simple interest amount is: R',  float(total))
+    elif user_investment_option == 'compound':
+        total = 0
+        total = user_amount_deposit_p * \
+            math.pow((1 + (interest_rate/100)), user_num_years_t)
+        print('The compound interest amount is: R',  float(total))
 
 if user_option == 'bond':
     value_of_the_house = float(input('Please enter the value of the house: R'))
@@ -25,17 +35,7 @@ if user_option == 'bond':
         input('Enter interest rate: '))
     period = float(input('Enter number of months you plan to repay the bond: '))
     installments = 0
-    installments = (interest_rate * value_of_the_house) / (1 - (1 + interest_rate))
-    math.pow(-(period))
+    installments = value_of_the_house * (interest_rate * (1 + interest_rate) * period) / ((1 + interest_rate) * period - 1)
     print('Your monthly payments will be: R', float(installments))
     
-if user_investment_option == 'simple':
-    total = 0
-    total = user_amount_deposit_p * \
-        (1 + (interest_rate/100) * user_num_years_t)
-    print('The simple interest amount is: R',  float(total))
-elif user_investment_option == 'compound':
-    total = 0
-    total = user_amount_deposit_p * \
-        math.pow((1 + (interest_rate/100)), user_num_years_t)
-    print('The compound interest amount is: R',  float(total))
+
