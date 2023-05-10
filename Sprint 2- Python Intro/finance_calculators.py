@@ -19,6 +19,16 @@ if user_option == 'investment':
     user_investment_option = input(
         'Choose between "simple" or "compound": ').lower()
 
+if user_option == 'bond':
+    value_of_the_house = float(input('Please enter the value of the house: R'))
+    interest_rate = float(
+        input('Enter interest rate: '))
+    period = float(input('Enter number of months you plan to repay the bond: '))
+    installments = 0
+    installments = (interest_rate * value_of_the_house) / (1 - (1 + interest_rate))
+    math.pow(-(period))
+    print('Your monthly payments will be: R', float(installments))
+    
 if user_investment_option == 'simple':
     total = 0
     total = user_amount_deposit_p * \
