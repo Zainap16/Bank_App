@@ -10,6 +10,7 @@ user_option = input('''
     ''').lower()
 
 if user_option == 'investment':
+    # conditi
     user_amount_deposit_p = float(
         input('Enter amount that you wish to deposit: R '))
     interest_rate = float(
@@ -39,3 +40,13 @@ if user_option == 'bond':
     installments = (value_of_the_house * (interest_rate / 1200)
                     ) / (1 - (math.pow((1 + (interest_rate / 1200)), -period)))
     print('Your monthly payments will be: R', float(installments))
+# else:
+#     while condition = True:
+#         print('Invalid code')
+#         user_option = input('''
+#         Choose either "investment" or "bond" from the menu below to proceed:
+
+#         investment      - to calculate the amount of interest you will earn on interest
+#         bond            - to calculate the amount you will have to pay on a home loan
+
+#         ''').lower()
