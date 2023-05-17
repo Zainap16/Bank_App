@@ -1,0 +1,2 @@
+Deposit :10000.0 			 Balance: 10100.0
+Withdraw :1000.0 			 Balance: 9100.0
