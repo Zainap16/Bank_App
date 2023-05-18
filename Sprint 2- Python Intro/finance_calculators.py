@@ -35,18 +35,6 @@ while condition:
                 math.pow((1 + (interest_rate/100)), user_num_years_t)
             print('The compound interest amount is: R',  float(total))
 
-<<<<<<< HEAD
-if user_option == 'bond':
-    value_of_the_house = float(input('Please enter the value of the house: R'))
-    interest_rate = float(
-        input('Enter interest rate: '))
-    period = float(
-        input('Enter number of months you plan to repay the bond: '))
-    installments = 0
-    installments = (value_of_the_house * (interest_rate / 1200)
-                    ) / (1 - (math.pow((1 + (interest_rate / 1200)), -period)))
-    print('Your monthly payments will be: R', float(installments))
-=======
 
 # bond calculator
 
@@ -97,4 +85,3 @@ if user_option == 'bond':
 #     installments = (value_of_the_house * (interest_rate / 1200)
 #                     ) / (1 - (math.pow((1 + (interest_rate / 1200)), -period)))
 #     print('Your monthly payments will be: R', float(installments))
->>>>>>> 89aa72069fadc1a3fe016b17f3c459c589184781
